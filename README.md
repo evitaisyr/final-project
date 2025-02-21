@@ -29,4 +29,6 @@ Include an Interactive Component that allows users to chose a team and see wheth
 5) Analyze Residuals from the Regression Model
    Compare NBA vs WNBA residuals and show top and bottom outliers 
    
-6) Interactive Feature: Chose a team and season to see how they performed vs the model
+6) Interactive Features:
+   Chose a team and season to see how they performed vs the model
+   Select a season for that team and adjust their MOV to see how this impacts wins
