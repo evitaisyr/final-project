@@ -7,8 +7,8 @@ This analysis aims to determine the statistical factors that best predict team w
 Calculate Win Percentage (WL%) for all NBA and WNBA teams across three seasons 2022-24.
 Visualize Relationships between key metrics (MOV, SRS, ORtg, DRtg, Pace) and team success (WL%).
 Perform Correlation Analysis to identify the strongest predictors of success.
-Conduct Regression Analysis to quantify how each metric impacts win percentage.
-Include an Interactive Component that allows users to estimate how an improvement in defensive rating (DRtg) translates into additional wins.
+Conduct Regression Analysis to quantify which metric impacts win percentage the most.
+Include an Interactive Component that allows users to chose a team and see whether they over or underperformed vs the model (actual wins vs predicted wins).
 
 ## Visualizations
 1) Correlation Heatmap: Metrics vs. Wins
@@ -19,14 +19,14 @@ Include an Interactive Component that allows users to estimate how an improvemen
    Do better defensive teams (lower DRtg) tend to win more games?
    Compare NBA vs. WNBA to see if defense is equally important in both leagues
 
-3) Regression Model: Predicting Wins from Key Metrics
-   Compare NBA vs. WNBA to see if the importance of defense differs
-   A negative DRtg coefficient means better defense leads to more wins
-
-4) Bar Chart: DRtg by Team (Best & Worst Defenses)
+3) Bar Chart: DRtg by Team (Best & Worst Defenses)
    Are the best defensive teams also the most successful?
    Sort teams by lowest (best) and highest (worst) DRtg. & compare their (WL%)
+   
+4) Regression Model: Predicting Wins from Key Metric
+   Compare NBA vs. WNBA to see if this metric is more important in one league
 
-5) Interactive Feature: Predict Win Improvement with DRtg Change
-   User inputs a change in DRtg (e.g., improving defense by 5 points
-   Model predicts how many more games the team would win
+5) Analyze Residuals from the Regression Model
+   Compare NBA vs WNBA residuals and show top and bottom outliers 
+   
+6) Interactive Feature: Chose a team and season to see how they performed vs the model
