@@ -14,31 +14,31 @@ Include an Interactive Component: 1) Select a team and see if they overperformed
 
 ## Visualizations
 1) Correlation Heatmap: Metrics vs. Wins
-   Objective: Identify which team statistics have the strongest correlation with win percentage (WL%).
-   Insight: Helps determine if the same metrics (e.g., MOV, SRS, ORtg, DRtg) are equally predictive in the       NBA and WNBA.
-   Visualization: Two heatmaps comparing the correlation of different stats with WL% in the NBA and WNBA.
+   * Objective: Identify which team statistics have the strongest correlation with win percentage (WL%).
+   * Insight: Helps determine if the same metrics (e.g., MOV, SRS, ORtg, DRtg) are equally predictive in the       NBA and WNBA.
+   * Visualization: Two heatmaps comparing the correlation of different stats with WL% in the NBA and WNBA.
    
 2) Scatter Plot: DRtg vs. Wins (with Trend Line)
-   Objective: Investigate whether teams with better defensive ratings (lower DRtg) tend to win more games.
-   Insight: Compare NBA vs. WNBA to assess if defense plays a similar role in both leagues.
-   Visualization: Two scatter plots with trend lines showing the relationship between DRtg and WL%.
+   * Objective: Investigate whether teams with better defensive ratings (lower DRtg) tend to win more games.
+   * Insight: Compare NBA vs. WNBA to assess if defense plays a similar role in both leagues.
+   * Visualization: Two scatter plots with trend lines showing the relationship between DRtg and WL%.
    
 3) Bar Chart: DRtg by Team (Best & Worst Defenses)
-   Objective: Determine if the best defensive teams (lowest DRtg) are also the most successful.
-   Insight: Compare the best and worst defensive teams’ DRtg alongside their win percentage (WL%).
-   Visualization: Bar charts ranking teams by DRtg with WL% displayed above each bar.
+   * Objective: Determine if the best defensive teams (lowest DRtg) are also the most successful.
+   * Insight: Compare the best and worst defensive teams’ DRtg alongside their win percentage (WL%).
+   * Visualization: Bar charts ranking teams by DRtg with WL% displayed above each bar.
    
 4) Regression Model: Predicting Wins from MOV
-   Objective: Use regression analysis to predict team wins based on their margin of victory (MOV).
-   Insight: Determine how well MOV predicts success and compare its impact in the NBA and WNBA.
-   Visualization: Scatter plots with regression lines showing actual wins vs. predicted wins.
+   * Objective: Use regression analysis to predict team wins based on their margin of victory (MOV).
+   * Insight: Determine how well MOV predicts success and compare its impact in the NBA and WNBA.
+   * Visualization: Scatter plots with regression lines showing actual wins vs. predicted wins.
 
 5) Residual Analysis: Overperforming vs. Underperforming Teams
-   Objective: Analyze residuals from the regression model to identify teams that overachieved or                            underachieved.
-   Insight: Compare NBA vs. WNBA residuals and highlight the largest over- and underperformers.
-   Visualization:
-            Scatter plot of predicted wins vs. residuals, marking top and bottom outliers.
-            Histogram of residuals to show overall model fit.
+   * Objective: Analyze residuals from the regression model to identify teams that overachieved or                            underachieved.
+   * Insight: Compare NBA vs. WNBA residuals and highlight the largest over- and underperformers.
+   * Visualization:
+              Scatter plot of predicted wins vs. residuals, marking top and bottom outliers.
+              Histogram of residuals to show overall model fit.
    
 6) Interactive Feature: Team Performance vs. Model
    * Objective: Allow users to explore a specific team’s performance compared to the model’s predictions.
@@ -46,11 +46,38 @@ Include an Interactive Component: 1) Select a team and see if they overperformed
              Adjust the team's Margin of Victory (MOV) to see how it would change their predicted wins.
    * Visualization: Scatter plot highlighting the selected team’s position and a text-based summary.
 
-   ## Conclusions
-   Graph 1: Correlation Heatmaps (NBA & WNBA)
+## Conclusions
+Graph 1: Correlation Heatmaps (NBA & WNBA)
    * MOV (Margin of Victory) and SRS (Simple Rating System) are the strongest predictors of WL% in both the        NBA and WNBA, with correlations above 0.96.
-   * DRtg (Defensive Rating) has a weaker correlation with wins (-0.67 in the NBA, -0.78 in the WNBA) which        suggests defense plays a more important role for wins in the WNBA       
-   * Pace has little to no correlation with winning, meaning a faster or slower style of play does not             necessarily translate to more wins.
-   Key takeaway: While defense (DRtg) is somewhat important, offensive and overall efficiency (MOV, SRS,         ORtg) are more strongly associated with winning in both leagues.
+   * DRtg (Defensive Rating) has a weaker correlation with wins (-0.67 in the NBA, -0.78 in the WNBA). The         more negative number for the WNBA suggests defense plays a more important role for wins in this league.     * Pace has little to no correlation with winning. Faster or slower style of play does not                       necessarily translate to more wins.
+Key takeaway: While defense (DRtg) is somewhat important, offensive and overall efficiency (MOV, SRS,         ORtg) are more strongly associated with winning in both leagues.
+
+Graph 2: Scatter Plot – DRtg vs. Wins
+   * There is a negative trend, meaning teams with lower DRtg (better defense) tend to win more games.
+   * The relationship appears stronger in the WNBA than the NBA, suggesting defense might be slightly more         impactful in the WNBA.
+Key takeaway: Better defense correlates with more wins, but it is not the sole determinant of success. Other factors, like offensive rating and overall team strength, also matter.
+
+Graph 3: Bar Chart – Best & Worst Defensive Teams
+   * Some of the best defensive teams (low DRtg) have high win percentages, but this is not always consistent.
+   * In both leagues, some teams with strong defenses still have low WL%, implying that defense alone is not       enough to guarantee success.
+Key takeaway: The best teams tend to have strong defenses, but elite defense does not always lead to elite winning percentages.
+
+Graphs 4 & 5: Regression Models – Predicting Wins
+   * The regression models confirm that MOV is the best single predictor of wins in both the NBA and WNBA,         which aligns with the correlation heatmap findings.
+   * DRtg is not included in the model due to multicollinearity concerns. Since MOV, SRS, ORtg, and DRtg are       highly correlated, including multiple similar variables would inflate variance inflation factors (VIF),       leading to unstable estimates.
+   * The scatter plots with regression lines visually confirm that teams with a higher MOV (winning margin)        tend to win more games.
+   * The high R-squared values (~0.92 for NBA, ~0.91 for WNBA) indicate that MOV explains the vast majority        of variance in team wins.
+Key takeaway: MOV is the most reliable predictor of wins, as it captures both offensive and defensive strength. Multicollinearity prevents using multiple correlated metrics (like ORtg & DRtg) together, so MOV serves as a composite indicator of overall team dominance. Teams that consistently win by larger margins are more likely to sustain success, making MOV the best single metric for predicting wins.
+
+Graph 6 & 7: Residuals Analysis (NBA & WNBA)
+   * Some teams overperformed or underperformed based on the regression model.
+   * This suggests that external factors (coaching, injuries, player performance, luck) impact wins beyond         just statistical metrics.
+Key takeaway: The model is strong, but not perfect—teams can exceed or fall short of expectations due to non-statistical factors.
+
+Graph 8: Interactive Model Output
+   * This allows users to adjust a team's MOV and see how it affects their predicted wins.
+   * It demonstrates that increasing MOV leads to more wins, reinforcing that MOV is the best predictor of          success.
+Key takeaway: A higher MOV translates directly into more wins, emphasizing that winning by larger margins is a sign of strong performance.
+
    
 
