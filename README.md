@@ -41,8 +41,16 @@ Include an Interactive Component: 1) Select a team and see if they overperformed
             Histogram of residuals to show overall model fit.
    
 6) Interactive Feature: Team Performance vs. Model
-   Objective: Allow users to explore a specific team’s performance compared to the model’s predictions.
-   Features: Select a team and season to see their actual vs. predicted wins.
+   * Objective: Allow users to explore a specific team’s performance compared to the model’s predictions.
+   * Features: Select a team and season to see their actual vs. predicted wins.
              Adjust the team's Margin of Victory (MOV) to see how it would change their predicted wins.
-   Visualization: Scatter plot highlighting the selected team’s position and a text-based summary.
+   * Visualization: Scatter plot highlighting the selected team’s position and a text-based summary.
+
+   ## Conclusions
+   Graph 1: Correlation Heatmaps (NBA & WNBA)
+   * MOV (Margin of Victory) and SRS (Simple Rating System) are the strongest predictors of WL% in both the        NBA and WNBA, with correlations above 0.96.
+   * DRtg (Defensive Rating) has a weaker correlation with wins (-0.67 in the NBA, -0.78 in the WNBA) which        suggests defense plays a more important role for wins in the WNBA       
+   * Pace has little to no correlation with winning, meaning a faster or slower style of play does not             necessarily translate to more wins.
+   Key takeaway: While defense (DRtg) is somewhat important, offensive and overall efficiency (MOV, SRS,         ORtg) are more strongly associated with winning in both leagues.
+   
 
