@@ -80,6 +80,7 @@ Graph 4: T-Tests – MOV & DRtg Comparison for High vs. Low WL%
 Key takeaway: MOV is the most significant differentiator between winning and losing teams in both leagues, reinforcing its role as the primary predictor of success. While DRtg plays a more important role in the WNBA than in the NBA, offensive dominance (MOV) remains the most consistent factor in determining team success across both leagues.
 
 Graphs 5 & 6: Regression Model – Predicting Wins
+
     * The regression model confirms MOV is the best single predictor of wins in both the NBA and WNBA,              aligning with the correlation heatmap findings.
     * Due to high correlations between MOV, SRS, ORtg, and DRtg, including multiple metrics in the           
       regression model would introduce multicollinearity, leading to unreliable estimates. MOV serves as a         composite measure of both offensive and defensive performance, making it the best standalone predictor.
