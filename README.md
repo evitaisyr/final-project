@@ -94,7 +94,7 @@ Key takeaway: The model is strong, but not perfect—teams can exceed or fall sh
 
 Graph 9: Interactive Model Output
    * This allows users to adjust a team's MOV and see how it affects their predicted wins.
-   * It demonstrates that increasing MOV leads to more wins, reinforcing that MOV is the best predictor of          success.
+   * It demonstrates that increasing MOV leads to more wins, reinforcing that MOV is the best predictor of        success.
 Key takeaway: A higher MOV translates directly into more wins, emphasizing that winning by larger margins is a sign of strong performance.
 
 ## Overall Conclusion
