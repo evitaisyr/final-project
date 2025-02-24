@@ -80,14 +80,12 @@ Graph 4: T-Tests – MOV & DRtg Comparison for High vs. Low WL%
 Key takeaway: MOV is the most significant differentiator between winning and losing teams in both leagues, reinforcing its role as the primary predictor of success. While DRtg plays a more important role in the WNBA than in the NBA, offensive dominance (MOV) remains the most consistent factor in determining team success across both leagues.
 
 Graphs 5 & 6: Regression Model – Predicting Wins
+  * The regression model confirms MOV is the strongest predictor of wins in both leagues, aligning with the      correlation heatmap.
+  * Due to high correlations between MOV, SRS, ORtg and DRtg including multiple metrics would introduce          multicollinearity leading to unreliable estimates. MOV serves as a composite measure for both offense        and defense performance making it the best standalone predictor.
+  * Scatter plots with regression lines visually confirm that teams with a higher MOV (winning margin) tend      to win more games.
+  * The high R-squared values (~0.92 for NBA, ~0.91 for WNBA) indicate that MOV accounts for the vast            majority of variance in team wins.
+Key takeaway: MOV is the most reliable predictor of wins across both leagues. By capturing both offensive and defensive dominance, it serves as the best single metric for forecasting success. Teams that consistently win by larger margins are more likely to sustain long-term success.
 
-    * The regression model confirms MOV is the best single predictor of wins in both the NBA and WNBA,              aligning with the correlation heatmap findings.
-    * Due to high correlations between MOV, SRS, ORtg, and DRtg, including multiple metrics in the           
-      regression model would introduce multicollinearity, leading to unreliable estimates. MOV serves as a         composite measure of both offensive and defensive performance, making it the best standalone predictor.
-    * The scatter plots with regression lines visually confirm that teams with a higher MOV (winning margin)       tend to win more games.
-    * The high R-squared values (~0.92 for NBA, ~0.91 for WNBA) indicate that MOV explains the vast majority       of variance in team wins.
-Key takeaway: MOV is the most reliable predictor of wins across both leagues. It effectively captures overall team dominance, making it the best single metric for predicting success. Teams that consistently win by larger margins are more likely to sustain long-term success.
-  
 Graph 7 & 8: Residuals Analysis (NBA & WNBA)
    * Some teams overperformed or underperformed based on the regression model.
    * This suggests that external factors (coaching, injuries, player performance, luck) impact wins beyond        just statistical metrics.
