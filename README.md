@@ -1,6 +1,12 @@
 ## Research Question
 Which statistical metrics (MOV, SRS, ORtg, DRtg, Pace) are the strongest predictors of win percentage (WL%) in the NBA and WNBA? Specifically, how significant is Defensive Rating (DRtg) in determining team success? Do these relationships differ between the two leagues?
 
+# NBA & WNBA Win Prediction Analysis
+## Final Project Presentation
+
+Click the link below to watch my final project presentation:
+▶️ [Watch the Presentation](https://github.com/evitaisyr/final-project/raw/main/video1291189233.mp4)
+
 ## Project Framework
 This analysis will determine the statistical factors that best predict team wins in the NBA and WNBA. Additionally, I will conduct an in-depth analysis of whether defense (Defensive Rating, DRtg) is a significant factor in both leagues. Specifically, this project includes:
 
