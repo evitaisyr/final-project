@@ -117,3 +117,4 @@ Key Findings:
 Final Takeaway:
 While defense (DRtg) is an important factor, the data consistently shows that MOV is the most reliable indicator of team success. Teams that consistently maintain a high MOV tend to achieve sustained success, making it the most reliable single metric for predicting wins in both leagues.
 
+(All data is from basketball-reference.com and was scraped for 2022-24 seasons for both leagues for all teams)
